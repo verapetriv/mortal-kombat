@@ -1,0 +1,25 @@
+.container {
+  height: 100vh;
+  background-image: url(../../assets/backgrounds/abstract.jpg);
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.title {
+  color: #fffffe;
+  font-size: 36px;
+}
+
+.heroesList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  max-width: 952px;
+  gap: 8px;
+}

@@ -5,6 +5,7 @@ import styles from './HeroCard.module.scss';
 
 interface IProps {
   hero: IHero;
+  width?: number;
   isActive: boolean;
   isMainHero: boolean;
   isChosenMainHero: boolean;
@@ -14,6 +15,7 @@ interface IProps {
 
 export const HeroCard: FC<IProps> = ({
   hero,
+  width,
   isActive,
   isMainHero,
   isChosenMainHero,
@@ -26,6 +28,7 @@ export const HeroCard: FC<IProps> = ({
         [styles.activeHero]: isActive && isMainHero,
         [styles.activeEnemy]: isActive && !isMainHero,
       })}
+      style={{ width }}
       onClick={handleClick}
     >
       <img className={styles.img} src={hero.image} alt={hero.name} />

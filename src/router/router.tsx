@@ -4,6 +4,7 @@ import { ChoosePlayer } from '../views/ChoosePlayer/ChoosePlayer';
 export enum Routes {
   ANY = '*',
   CHOOSE_PLAYER = '/choose-player',
+  VERSUS = '/versus',
 }
 
 export const router = createBrowserRouter([

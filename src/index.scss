@@ -2,17 +2,17 @@ body {
   font-family: 'Black Ops One', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --hero-color: #41df00;
+  --enemy-color: #f71a05;
 }
 
 code {
   font-family: 'Black Ops One', cursive;
 }
 
-html {
-  box-sizing: border-box;
-}
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
