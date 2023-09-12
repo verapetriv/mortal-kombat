@@ -8,6 +8,7 @@ import { Container } from '../../components/Container/Container';
 import { HeroPreview } from '../../components/HeroPreview/HeroPreview';
 import { useChangeIcons } from '../../hooks/useChangeIcons';
 import { CheatIcons } from '../../components/CheatIcons/CheatIcons';
+import { useTimeOnVersusPage } from '../../hooks/useTimeOnVersusPage';
 
 export const Versus: FC = () => {
   const mainHero = useAppSelector(mainPlayer);
@@ -16,6 +17,8 @@ export const Versus: FC = () => {
   const navigate = useNavigate();
 
   const { icons } = useChangeIcons();
+
+  useTimeOnVersusPage();
 
   useEffect(() => {
     if (!mainHero || !enemy) {
