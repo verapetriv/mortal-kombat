@@ -10,6 +10,9 @@ import sindel from './sindel-battle.gif';
 import smoke from './smoke-battle.gif';
 import sonyaBlade from './sonyablade-battle.gif';
 import subZero from './subzero-battle.gif';
+import kabal from './kabal-battle.gif';
+import kungLao from './kunglao-battle.gif';
+import sheeva from './sheeve-battle.gif';
 
 export const heroesBattles = {
   baraka,
@@ -24,4 +27,7 @@ export const heroesBattles = {
   smoke,
   sonyaBlade,
   subZero,
+  kabal,
+  kungLao,
+  sheeva,
 };

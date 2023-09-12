@@ -95,4 +95,25 @@ export const heroes: IHero[] = [
     preview: heroesPreviews.subZero,
     battle: heroesBattles.subZero,
   },
+  {
+    id: 13,
+    name: 'Kabal',
+    image: heroesImages.kabal,
+    preview: heroesPreviews.kabal,
+    battle: heroesBattles.kabal,
+  },
+  {
+    id: 14,
+    name: 'Kung Lao',
+    image: heroesImages.kungLao,
+    preview: heroesPreviews.kungLao,
+    battle: heroesBattles.kungLao,
+  },
+  {
+    id: 15,
+    name: 'Sheeva',
+    image: heroesImages.sheeva,
+    preview: heroesPreviews.sheeva,
+    battle: heroesBattles.sheeva,
+  },
 ];

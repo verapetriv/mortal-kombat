@@ -10,6 +10,9 @@ import sindel from './sindel.jpg';
 import smoke from './smoke.jpeg';
 import sonyaBlade from './sonyablade.jpg';
 import subZero from './subzero.jpg';
+import kabal from './kabal.jpg';
+import kungLao from './kunglao.jpg';
+import sheeva from './sheeva.jpg';
 
 export const heroesImages = {
   baraka,
@@ -24,4 +27,7 @@ export const heroesImages = {
   smoke,
   sonyaBlade,
   subZero,
+  kabal,
+  kungLao,
+  sheeva,
 };

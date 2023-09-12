@@ -10,6 +10,9 @@ import sindel from './sindel-preview.gif';
 import smoke from './smoke-preview.gif';
 import sonyaBlade from './sonyablade-preview.gif';
 import subZero from './subzero-preview.gif';
+import kabal from './kabal-preview.gif';
+import kungLao from './kunglao-preview.gif';
+import sheeva from './sheeva-preview.gif';
 
 export const heroesPreviews = {
   baraka,
@@ -24,4 +27,7 @@ export const heroesPreviews = {
   smoke,
   sonyaBlade,
   subZero,
+  kabal,
+  kungLao,
+  sheeva,
 };
