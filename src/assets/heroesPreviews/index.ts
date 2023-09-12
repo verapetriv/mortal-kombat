@@ -7,7 +7,7 @@ import liuKang from './liukang-preview.gif';
 import sector from './sector-preview.gif';
 import shang from './shang-preview.webp';
 import sindel from './sindel-preview.gif';
-import smoke from './smoke-preview.gif';
+import smoke from './smoke-preview.webp';
 import sonyaBlade from './sonyablade-preview.gif';
 import subZero from './subzero-preview.gif';
 import kabal from './kabal-preview.gif';
