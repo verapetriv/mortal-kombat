@@ -1,22 +1,31 @@
 import React, { FC } from 'react';
-import { IHero } from '../../data/heroes';
 import styles from './HeroPreview.module.scss';
 import cn from 'classnames';
 
 interface IProps {
-  hero: IHero;
+  name: string;
+  imageSrc: string;
+  size?: 'middle' | 'large';
   isEnemy?: boolean;
+  hideName?: boolean;
 }
 
-export const HeroPreview: FC<IProps> = ({ hero, isEnemy }) => (
+export const HeroPreview: FC<IProps> = ({
+  name,
+  imageSrc,
+  size = 'middle',
+  isEnemy,
+  hideName,
+}) => (
   <div className={styles.wrapper}>
     <img
       className={cn(styles.image, {
         [styles.mirrorImage]: isEnemy,
+        [styles.largeImage]: size === 'large',
       })}
-      src={hero.preview}
-      alt={hero.name}
+      src={imageSrc}
+      alt={name}
     />
-    <p className={styles.heroName}>{hero.name}</p>
+    {!hideName && <p className={styles.heroName}>{name}</p>}
   </div>
 );

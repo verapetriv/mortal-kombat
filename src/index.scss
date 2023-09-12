@@ -5,6 +5,15 @@ body {
 
   --hero-color: #41df00;
   --enemy-color: #f71a05;
+
+  height: 100vh;
+  background-image: url(./assets/backgrounds/abstract.jpg);
+  background-position: top;
+  background-size: cover;
+
+  #root {
+    height: 100%
+  }
 }
 
 code {
