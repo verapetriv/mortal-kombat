@@ -4,6 +4,7 @@
   border: 1px solid #152229;
   overflow: hidden;
   cursor: pointer;
+  margin: 4px;
 }
 
 .activeHero {
@@ -21,7 +22,7 @@
 
 .playerNumber {
   position: absolute;
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .firstNumber {
