@@ -10,6 +10,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+## Deploy
+
+[https://mortal-kombat-nu.vercel.app/choose-player](https://mortal-kombat-nu.vercel.app/choose-player)
+
 ## Project description
 
 Two start screens of the Mortal Kombat game have been implemented: 
