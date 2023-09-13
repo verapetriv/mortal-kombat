@@ -8,7 +8,9 @@ import { Container } from '../../components/Container/Container';
 import { HeroPreview } from '../../components/HeroPreview/HeroPreview';
 import { useChangeIcons } from '../../hooks/useChangeIcons';
 import { CheatIcons } from '../../components/CheatIcons/CheatIcons';
-import { useTimerToRedirect } from '../../hooks/useTimeOnVersusPage';
+import { useCheatCodes } from '../../hooks/useCheatCodes';
+import { Rate } from '../../components/Rate/Rate';
+import { useTimerToRedirect } from '../../hooks/useTimerToRedirect';
 
 export const Versus: FC = () => {
   const mainHero = useAppSelector(mainPlayer);
@@ -17,6 +19,7 @@ export const Versus: FC = () => {
   const navigate = useNavigate();
 
   const { icons } = useChangeIcons();
+  const { mainHeroRates, enemyRates } = useCheatCodes();
 
   useTimerToRedirect();
 
@@ -30,6 +33,7 @@ export const Versus: FC = () => {
     <Container>
       <div className={styles.heroesWrapper}>
         <div className={styles.heroWrapper}>
+          <Rate value={mainHeroRates} />
           {mainHero && (
             <HeroPreview
               name={mainHero.name}
@@ -49,6 +53,7 @@ export const Versus: FC = () => {
               isEnemy
             />
           )}
+          <Rate value={enemyRates} />
         </div>
       </div>
       <CheatIcons icons={icons} />

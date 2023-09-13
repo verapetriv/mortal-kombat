@@ -1,11 +1,12 @@
 .heroesWrapper {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .heroWrapper {
-  flex: 0 1 50%;
   display: flex;
   justify-content: center;
+  align-items: end;
+  gap: 12px;
 }
