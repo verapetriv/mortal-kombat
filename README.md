@@ -1,7 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -14,33 +10,25 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+## Project description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Two start screens of the Mortal Kombat game have been implemented: 
 
-### `npm run build`
+  1. **Choosing a hero screen.**\
+    Two seconds after selecting the second player, you will be taken to the second screen.\
+    You can preview the player by: 
+      - clicking on the card 
+      - clicking on 'ArrowUp', 'ArrowDown', 'ArrowLeft' and 'ArrowRight' buttons
+    You can select a player by: 
+      - double-clicking on the card
+      - pressing the 'Enter' button
+  
+  3. **Versus screen.**\
+    On this page, you have the opportunity to use cheat codes of the QWERTY keys to increase the rating of the players, but only 4 seconds are allocated for this.\
+    Cheat codes:
+      - 'w' + 'q' - increases your hero's rating by 1 points
+      - 'q' + 'w' + 'e' - increases your hero's rating by 2 points
+      - 't' + 'r' - increases your enemy's rating by 1 points
+      - 'r' + 't' + 'y' - increases your enemy's rating by 2 points
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Have a good game!
