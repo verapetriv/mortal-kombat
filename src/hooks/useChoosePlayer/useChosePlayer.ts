@@ -33,25 +33,28 @@ export const useChoosePlayer = (heroes: IHero[], heroCardWidth: number) => {
     return heroesCountInRow ? Math.ceil(countHeroes / heroesCountInRow) : 0;
   }, [countHeroes, heroesCountInRow]);
 
-  const handleEnterClick = useCallback(() => {
-    if (!activeHero) return;
+  const handleChooseHero = useCallback(
+    (hero: IHero | null) => {
+      if (!hero) return;
 
-    if (player === PLAYERS.MAIN) {
-      dispatch(setMainPlayer(activeHero));
-      setPlayer(PLAYERS.ENEMY);
-      setActiveHero(defaultHero);
-      return;
-    }
+      if (player === PLAYERS.MAIN) {
+        dispatch(setMainPlayer(hero));
+        setPlayer(PLAYERS.ENEMY);
+        setActiveHero(defaultHero);
+        return;
+      }
 
-    dispatch(setEnemyPlayer(activeHero));
+      dispatch(setEnemyPlayer(hero));
 
-    setActiveHero(null);
-    setPlayer(null);
+      setActiveHero(null);
+      setPlayer(null);
 
-    setTimeout(() => {
-      navigate(Routes.VERSUS);
-    }, 2000);
-  }, [dispatch, activeHero, player]);
+      setTimeout(() => {
+        navigate(Routes.VERSUS);
+      }, 2000);
+    },
+    [dispatch, activeHero, player],
+  );
 
   const handleArrowsClick = useCallback(
     (event: KeyboardEvent) => {
@@ -84,7 +87,7 @@ export const useChoosePlayer = (heroes: IHero[], heroCardWidth: number) => {
   const handleKeyDown = useCallback(
     (event: KeyboardEvent) => {
       if (event.key === 'Enter') {
-        handleEnterClick();
+        handleChooseHero(activeHero);
         return;
       }
 
@@ -92,10 +95,10 @@ export const useChoosePlayer = (heroes: IHero[], heroCardWidth: number) => {
         handleArrowsClick(event);
       }
     },
-    [handleEnterClick, handleArrowsClick],
+    [handleChooseHero, handleArrowsClick],
   );
 
-  const handleClickCard = (hero: IHero): void => setActiveHero(hero);
+  const handleSetActiveHero = (hero: IHero): void => setActiveHero(hero);
 
   useEffect(() => {
     const { current } = heroListRef;
@@ -115,6 +118,7 @@ export const useChoosePlayer = (heroes: IHero[], heroCardWidth: number) => {
     heroListRef,
     activeHero,
     player,
-    handleClickCard,
+    handleSetActiveHero,
+    handleChooseHero,
   };
 };

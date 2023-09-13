@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react';
 import styles from './ChoosePlayer.module.scss';
-import { heroes } from '../../data/heroes';
+import { heroes, IHero } from '../../data/heroes';
 import { HeroCard } from '../../components/HeroCard/HeroCard';
 import { useAppSelector } from '../../hooks/useAppSelector';
 import { useAppDispatch } from '../../hooks/useAppDispatch';
@@ -22,7 +22,13 @@ export const ChoosePlayer: FC = () => {
 
   const dispatch = useAppDispatch();
 
-  const { heroListRef, activeHero, player, handleClickCard } = useChoosePlayer(
+  const {
+    heroListRef,
+    activeHero,
+    player,
+    handleSetActiveHero,
+    handleChooseHero,
+  } = useChoosePlayer(
     heroes,
     // width + margin
     heroCardWidth + 8,
@@ -31,6 +37,12 @@ export const ChoosePlayer: FC = () => {
   const mainHeroPreview =
     chosenMainHero || (player === PLAYERS.MAIN && activeHero);
   const enemyPreview = chosenEnemy || (player === PLAYERS.ENEMY && activeHero);
+
+  const handleDoubleCardClick = (hero: IHero): void => {
+    if (chosenMainHero && chosenEnemy) return;
+
+    handleChooseHero(hero);
+  };
 
   useEffect(() => {
     dispatch(clearState());
@@ -59,7 +71,8 @@ export const ChoosePlayer: FC = () => {
                 isMainHero={player === PLAYERS.MAIN}
                 isChosenMainHero={chosenMainHero?.id === hero.id}
                 isChosenEnemy={chosenEnemy?.id === hero.id}
-                handleClick={() => handleClickCard(hero)}
+                handleClick={() => handleSetActiveHero(hero)}
+                handleDoubleClick={() => handleDoubleCardClick(hero)}
               />
             ))}
           </ul>

@@ -10,7 +10,8 @@ interface IProps {
   isMainHero: boolean;
   isChosenMainHero: boolean;
   isChosenEnemy: boolean;
-  handleClick: () => void;
+  handleClick?: () => void;
+  handleDoubleClick?: () => void;
 }
 
 export const HeroCard: FC<IProps> = ({
@@ -21,6 +22,7 @@ export const HeroCard: FC<IProps> = ({
   isChosenMainHero,
   isChosenEnemy,
   handleClick,
+  handleDoubleClick,
 }) => {
   return (
     <li
@@ -30,6 +32,7 @@ export const HeroCard: FC<IProps> = ({
       })}
       style={{ width }}
       onClick={handleClick}
+      onDoubleClick={handleDoubleClick}
     >
       <img className={styles.img} src={hero.image} alt={hero.name} />
       {isChosenMainHero && (
