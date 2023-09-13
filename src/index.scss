@@ -1,0 +1,28 @@
+body {
+  font-family: 'Black Ops One', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --hero-color: #41df00;
+  --enemy-color: #f71a05;
+
+  height: 100vh;
+  background-image: url(./assets/backgrounds/abstract.jpg);
+  background-position: top;
+  background-size: cover;
+
+  #root {
+    height: 100%
+  }
+}
+
+code {
+  font-family: 'Black Ops One', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+

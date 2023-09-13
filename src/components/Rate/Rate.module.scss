@@ -1,0 +1,15 @@
+.container {
+  max-height: 240px;
+  max-width: 40px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to left, #333, #8c8989 100%, #333 50%,  #333 75%);
+  display: flex;
+  align-items: end;
+}
+
+.rate {
+  width: 100%;
+  background: linear-gradient(to left, #7c4714, #b9814b 100%, #7c4714 50%,  #7c4714 75%);
+  transition: height 0.2s ease-in-out;
+}
