@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import styles from './TheEnd.module.scss';
+import { Container } from '../../components/Container/Container';
 
 export const TheEnd: FC = () => (
-  <div className={styles.wrapper}>
+  <Container>
     <span className={styles.text}>The End</span>
-  </div>
+  </Container>
 );

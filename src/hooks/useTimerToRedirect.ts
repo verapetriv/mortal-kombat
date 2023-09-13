@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Routes } from '../router/router';
 
-export const useTimeOnVersusPage = () => {
+export const useTimerToRedirect = () => {
   const navigate = useNavigate();
 
   useEffect(() => {

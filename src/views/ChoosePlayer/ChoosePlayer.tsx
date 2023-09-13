@@ -27,42 +27,40 @@ export const ChoosePlayer: FC = () => {
 
   return (
     <Container>
-      <div className={styles.container}>
-        <p className={styles.title}>Select your fighter</p>
-        <div className={styles.mainBlock}>
-          <div className={styles.previewContainer}>
-            {mainHeroPreview && (
-              <HeroPreview
-                name={mainHeroPreview.name}
-                imageSrc={mainHeroPreview.preview}
+      <p className={styles.title}>Select your fighter</p>
+      <div className={styles.mainBlock}>
+        <div className={styles.previewContainer}>
+          {mainHeroPreview && (
+            <HeroPreview
+              name={mainHeroPreview.name}
+              imageSrc={mainHeroPreview.preview}
+            />
+          )}
+        </div>
+        <div className={styles.heroesListWrapper}>
+          <ul className={styles.heroesList} ref={heroListRef}>
+            {heroes.map((hero) => (
+              <HeroCard
+                key={hero.id}
+                hero={hero}
+                width={heroCardWidth}
+                isActive={activeHero?.id === hero.id}
+                isMainHero={player === PLAYERS.MAIN}
+                isChosenMainHero={chosenMainHero?.id === hero.id}
+                isChosenEnemy={chosenEnemy?.id === hero.id}
+                handleClick={() => handleClickCard(hero)}
               />
-            )}
-          </div>
-          <div className={styles.heroesListWrapper}>
-            <ul className={styles.heroesList} ref={heroListRef}>
-              {heroes.map((hero) => (
-                <HeroCard
-                  key={hero.id}
-                  hero={hero}
-                  width={heroCardWidth}
-                  isActive={activeHero?.id === hero.id}
-                  isMainHero={player === PLAYERS.MAIN}
-                  isChosenMainHero={chosenMainHero?.id === hero.id}
-                  isChosenEnemy={chosenEnemy?.id === hero.id}
-                  handleClick={() => handleClickCard(hero)}
-                />
-              ))}
-            </ul>
-          </div>
-          <div className={styles.previewContainer}>
-            {enemyPreview && (
-              <HeroPreview
-                name={enemyPreview.name}
-                imageSrc={enemyPreview.preview}
-                isEnemy
-              />
-            )}
-          </div>
+            ))}
+          </ul>
+        </div>
+        <div className={styles.previewContainer}>
+          {enemyPreview && (
+            <HeroPreview
+              name={enemyPreview.name}
+              imageSrc={enemyPreview.preview}
+              isEnemy
+            />
+          )}
         </div>
       </div>
     </Container>

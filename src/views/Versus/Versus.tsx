@@ -8,7 +8,7 @@ import { Container } from '../../components/Container/Container';
 import { HeroPreview } from '../../components/HeroPreview/HeroPreview';
 import { useChangeIcons } from '../../hooks/useChangeIcons';
 import { CheatIcons } from '../../components/CheatIcons/CheatIcons';
-import { useTimeOnVersusPage } from '../../hooks/useTimeOnVersusPage';
+import { useTimerToRedirect } from '../../hooks/useTimeOnVersusPage';
 
 export const Versus: FC = () => {
   const mainHero = useAppSelector(mainPlayer);
@@ -18,7 +18,7 @@ export const Versus: FC = () => {
 
   const { icons } = useChangeIcons();
 
-  useTimeOnVersusPage();
+  useTimerToRedirect();
 
   useEffect(() => {
     if (!mainHero || !enemy) {
@@ -28,32 +28,30 @@ export const Versus: FC = () => {
 
   return (
     <Container>
-      <div className={styles.container}>
-        <div className={styles.heroesWrapper}>
-          <div className={styles.heroWrapper}>
-            {mainHero && (
-              <HeroPreview
-                name={mainHero.name}
-                imageSrc={mainHero.preview}
-                hideName
-                size={'large'}
-              />
-            )}
-          </div>
-          <div className={styles.heroWrapper}>
-            {enemy && (
-              <HeroPreview
-                name={enemy.name}
-                imageSrc={enemy.preview}
-                hideName
-                size={'large'}
-                isEnemy
-              />
-            )}
-          </div>
+      <div className={styles.heroesWrapper}>
+        <div className={styles.heroWrapper}>
+          {mainHero && (
+            <HeroPreview
+              name={mainHero.name}
+              imageSrc={mainHero.preview}
+              hideName
+              size={'large'}
+            />
+          )}
         </div>
-        <CheatIcons icons={icons} />
+        <div className={styles.heroWrapper}>
+          {enemy && (
+            <HeroPreview
+              name={enemy.name}
+              imageSrc={enemy.preview}
+              hideName
+              size={'large'}
+              isEnemy
+            />
+          )}
+        </div>
       </div>
+      <CheatIcons icons={icons} />
     </Container>
   );
 };
