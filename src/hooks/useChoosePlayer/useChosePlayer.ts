@@ -1,7 +1,8 @@
 import { IHero } from '../../data/heroes';
 import { useState, useRef, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AllCoordinatesType, Arrows, PLAYERS } from './types';
+import { AllCoordinatesType, Arrows } from './types';
+import { PLAYERS } from '../../config';
 import {
   getAllCoordinates,
   getKeyByValue,

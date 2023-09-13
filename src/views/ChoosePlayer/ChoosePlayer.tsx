@@ -5,7 +5,7 @@ import { HeroCard } from '../../components/HeroCard/HeroCard';
 import { useAppSelector } from '../../hooks/useAppSelector';
 import { enemyPlayer, mainPlayer } from '../../redux/players/playersSlice';
 import { useChoosePlayer } from '../../hooks/useChoosePlayer/useChosePlayer';
-import { PLAYERS } from '../../hooks/useChoosePlayer/types';
+import { PLAYERS } from '../../config';
 import { HeroPreview } from '../../components/HeroPreview/HeroPreview';
 import { Container } from '../../components/Container/Container';
 
