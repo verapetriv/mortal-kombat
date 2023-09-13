@@ -5,9 +5,9 @@ import { HeroCard } from 'components/HeroCard/HeroCard';
 import { useAppSelector } from 'hooks/useAppSelector';
 import { useAppDispatch } from 'hooks/useAppDispatch';
 import {
+  clearState,
   enemyPlayer,
   mainPlayer,
-  clearState,
 } from 'redux/players/playersSlice';
 import { useChoosePlayer } from 'hooks/useChoosePlayer/useChosePlayer';
 import { PLAYERS } from 'config';
@@ -50,7 +50,9 @@ export const ChoosePlayer: FC = () => {
 
   return (
     <Container>
-      <p className={styles.title}>Select your fighter</p>
+      <p className={styles.title}>
+        Select your {player === PLAYERS.MAIN ? 'fighter' : 'enemy'}
+      </p>
       <div className={styles.mainBlock}>
         <div className={styles.previewContainer}>
           {mainHeroPreview && (
