@@ -18,10 +18,15 @@ export const playersSlice = createSlice({
     setEnemyPlayer: (state, { payload }: { payload: IHero }) => {
       state.enemy = payload;
     },
+    clearState: (state) => {
+      state.main = null;
+      state.enemy = null;
+    },
   },
 });
 
-export const { setMainPlayer, setEnemyPlayer } = playersSlice.actions;
+export const { setMainPlayer, setEnemyPlayer, clearState } =
+  playersSlice.actions;
 
 export const mainPlayer = (state: RootState) => state.players.main;
 export const enemyPlayer = (state: RootState) => state.players.enemy;

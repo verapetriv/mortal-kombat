@@ -1,9 +1,14 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import styles from './ChoosePlayer.module.scss';
 import { heroes } from '../../data/heroes';
 import { HeroCard } from '../../components/HeroCard/HeroCard';
 import { useAppSelector } from '../../hooks/useAppSelector';
-import { enemyPlayer, mainPlayer } from '../../redux/players/playersSlice';
+import { useAppDispatch } from '../../hooks/useAppDispatch';
+import {
+  enemyPlayer,
+  mainPlayer,
+  clearState,
+} from '../../redux/players/playersSlice';
 import { useChoosePlayer } from '../../hooks/useChoosePlayer/useChosePlayer';
 import { PLAYERS } from '../../config';
 import { HeroPreview } from '../../components/HeroPreview/HeroPreview';
@@ -15,6 +20,8 @@ export const ChoosePlayer: FC = () => {
   const chosenMainHero = useAppSelector(mainPlayer);
   const chosenEnemy = useAppSelector(enemyPlayer);
 
+  const dispatch = useAppDispatch();
+
   const { heroListRef, activeHero, player, handleClickCard } = useChoosePlayer(
     heroes,
     // width + margin
@@ -24,6 +31,10 @@ export const ChoosePlayer: FC = () => {
   const mainHeroPreview =
     chosenMainHero || (player === PLAYERS.MAIN && activeHero);
   const enemyPreview = chosenEnemy || (player === PLAYERS.ENEMY && activeHero);
+
+  useEffect(() => {
+    dispatch(clearState());
+  }, []);
 
   return (
     <Container>

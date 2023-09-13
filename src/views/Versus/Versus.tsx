@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import React, { FC, useEffect } from 'react';
 import styles from './Versus.module.scss';
 import { useAppSelector } from '../../hooks/useAppSelector';
 import { enemyPlayer, mainPlayer } from '../../redux/players/playersSlice';
