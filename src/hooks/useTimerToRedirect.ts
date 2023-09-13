@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Routes } from '../router/router';
+import { Routes } from 'router/router';
 
 export const useTimerToRedirect = () => {
   const navigate = useNavigate();

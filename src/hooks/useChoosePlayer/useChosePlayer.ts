@@ -1,19 +1,16 @@
-import { IHero } from '../../data/heroes';
+import { IHero } from 'data/heroes';
 import { useState, useRef, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AllCoordinatesType, Arrows } from './types';
-import { PLAYERS } from '../../config';
+import { PLAYERS } from 'config';
 import {
   getAllCoordinates,
   getKeyByValue,
   getNextCoordinates,
 } from './helpers';
 import { useAppDispatch } from '../useAppDispatch';
-import {
-  setMainPlayer,
-  setEnemyPlayer,
-} from '../../redux/players/playersSlice';
-import { Routes } from '../../router/router';
+import { setMainPlayer, setEnemyPlayer } from 'redux/players/playersSlice';
+import { Routes } from 'router/router';
 
 export const useChoosePlayer = (heroes: IHero[], heroCardWidth: number) => {
   const defaultHero = heroes[0];

@@ -1,4 +1,4 @@
-import { IHero } from '../../data/heroes';
+import { IHero } from 'data/heroes';
 
 export interface IPlayersState {
   main: IHero | null;

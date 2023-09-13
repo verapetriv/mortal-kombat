@@ -8,9 +8,9 @@ import { Container } from '../../components/Container/Container';
 import { HeroPreview } from '../../components/HeroPreview/HeroPreview';
 import { useChangeIcons } from '../../hooks/useChangeIcons';
 import { CheatIcons } from '../../components/CheatIcons/CheatIcons';
-import { useCheatCodes } from '../../hooks/useCheatCodes';
-import { Rate } from '../../components/Rate/Rate';
-import { useTimerToRedirect } from '../../hooks/useTimerToRedirect';
+import { useCheatCodes } from 'hooks/useCheatCodes';
+import { Rate } from 'components/Rate/Rate';
+import { useTimerToRedirect } from 'hooks/useTimerToRedirect';
 
 export const Versus: FC = () => {
   const mainHero = useAppSelector(mainPlayer);

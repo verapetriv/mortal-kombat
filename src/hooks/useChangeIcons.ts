@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useState } from 'react';
-import { iconsVariants } from '../data/icons';
+import { iconsVariants } from 'data/icons';
 
 const qwertyButtons = {
   q: 'q',

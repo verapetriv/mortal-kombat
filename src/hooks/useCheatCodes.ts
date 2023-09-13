@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { PLAYERS } from '../config';
+import { PLAYERS } from 'config';
 
 const cheatCodesVariants = [
   {

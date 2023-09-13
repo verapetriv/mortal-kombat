@@ -1,18 +1,18 @@
 import React, { FC, useEffect } from 'react';
 import styles from './ChoosePlayer.module.scss';
-import { heroes, IHero } from '../../data/heroes';
-import { HeroCard } from '../../components/HeroCard/HeroCard';
-import { useAppSelector } from '../../hooks/useAppSelector';
-import { useAppDispatch } from '../../hooks/useAppDispatch';
+import { heroes, IHero } from 'data/heroes';
+import { HeroCard } from 'components/HeroCard/HeroCard';
+import { useAppSelector } from 'hooks/useAppSelector';
+import { useAppDispatch } from 'hooks/useAppDispatch';
 import {
   enemyPlayer,
   mainPlayer,
   clearState,
-} from '../../redux/players/playersSlice';
-import { useChoosePlayer } from '../../hooks/useChoosePlayer/useChosePlayer';
-import { PLAYERS } from '../../config';
-import { HeroPreview } from '../../components/HeroPreview/HeroPreview';
-import { Container } from '../../components/Container/Container';
+} from 'redux/players/playersSlice';
+import { useChoosePlayer } from 'hooks/useChoosePlayer/useChosePlayer';
+import { PLAYERS } from 'config';
+import { HeroPreview } from 'components/HeroPreview/HeroPreview';
+import { Container } from 'components/Container/Container';
 
 const heroCardWidth = 160;
 

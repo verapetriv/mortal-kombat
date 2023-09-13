@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { IHero } from '../../data/heroes';
+import { IHero } from 'data/heroes';
 import cn from 'classnames';
 import styles from './HeroCard.module.scss';
 

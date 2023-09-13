@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { RootState } from '../store';
 import { IPlayersState } from './types';
-import { IHero } from '../../data/heroes';
+import { IHero } from 'data/heroes';
 
 const initialState: IPlayersState = {
   main: null,

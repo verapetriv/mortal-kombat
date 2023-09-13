@@ -1,5 +1,5 @@
-import { heroesImages } from '../assets/heroesImages';
-import { heroesPreviews } from '../assets/heroesPreviews';
+import { heroesImages } from 'assets/heroesImages';
+import { heroesPreviews } from 'assets/heroesPreviews';
 
 export interface IHero {
   id: number;

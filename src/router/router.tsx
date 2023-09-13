@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
-import { ChoosePlayer } from '../views/ChoosePlayer/ChoosePlayer';
-import { Versus } from '../views/Versus/Versus';
-import { TheEnd } from '../views/TheEnd/TheEnd';
+import { ChoosePlayer } from 'views/ChoosePlayer/ChoosePlayer';
+import { Versus } from 'views/Versus/Versus';
+import { TheEnd } from 'views/TheEnd/TheEnd';
 
 export enum Routes {
   ANY = '*',
